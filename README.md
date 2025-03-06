@@ -23,8 +23,6 @@
 
 - **docker-compose.yml** :
 ```yaml
-version: '3.8'
-
 services:
   app:
     build: ./app
@@ -65,7 +63,6 @@ services:
 
 volumes:
   pg_data:
-
 
 ```
 
