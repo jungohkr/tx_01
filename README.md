@@ -190,4 +190,10 @@ docker build -t myapp .
 # 도커 컨테이너를 실행합니다.
 docker run -p 8000:8000 myapp
 
+#반복되는 작업에 중복되는 컨테이너 정
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+docker-compose up --build
+
 ```
