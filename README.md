@@ -113,7 +113,7 @@ celery==5.1.2
 
 ```
 
-- **/app/tasks.py** :
+- **/app/main.py** :
 ``` python
 from fastapi import FastAPI
 from models import Problem, engine
