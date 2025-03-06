@@ -68,7 +68,7 @@ volumes:
 
 ```
 
-- **/app/Dockerfile** :
+- /app/Dockerfile :
 
 ```dockerfile
 FROM 
