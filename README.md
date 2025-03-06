@@ -68,7 +68,7 @@ volumes:
 
 ```
 
-- /app/Dockerfile :
+- **/app/Dockerfile** :
 
 ```dockerfile
 FROM 
@@ -79,7 +79,7 @@ RUN useradd -m appuser USER appuser
 COPY . .
 ```
 
-- **/app/requirements.txt ** :
+- **/app/requirements.txt** :
 ```text
 fastapi
 uvicorn
@@ -89,7 +89,7 @@ redis
 celery
 ```
 
-- ***/app/tasks.py** :
+- **/app/tasks.py** :
 ``` python
 from fastapi import FastAPI
 from models import Problem, engine
