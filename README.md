@@ -263,9 +263,10 @@ docker compose up --build
 git add .
 git commit -m "Your commit message"
 git push origin main
-docker-compose down
-docker-compose build --no-cache
-docker-compose up
+
+docker compose down
+docker compose build --no-cache
+docker compose up
 
 
 
