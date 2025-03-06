@@ -264,7 +264,9 @@ git push origin main
 docker compose down
 docker compose build --no-cache
 docker compose up
+```
 
-
-
+```
+#도커 이미지 청소 (다지움)
+docker rmi $(docker images -q)
 ```
