@@ -176,3 +176,14 @@ CREATE TABLE problems (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+
+
+##### 5. 빌드.
+```
+# 도커 이미지를 빌드합니다.
+docker build -t myapp .
+
+# 도커 컨테이너를 실행합니다.
+docker run -p 8000:8000 myapp
+
+```
