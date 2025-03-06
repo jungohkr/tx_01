@@ -157,7 +157,7 @@ events {}
 http {
     server {
         listen 80;
-        
+
         location / {
             proxy_pass http://app:8000;
             proxy_set_header Host $host;
@@ -167,6 +167,9 @@ http {
         # 로그 설정 추가
         access_log /var/log/nginx/access.log;
         error_log /var/log/nginx/error.log;
+    }
+}
+
     
 ```
 
