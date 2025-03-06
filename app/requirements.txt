@@ -1,6 +1,6 @@
-fastapi
-uvicorn
-sqlalchemy
-psycopg2-binary
-redis
-celery
+fastapi==0.68.0
+uvicorn==0.14.0
+sqlalchemy==1.4.22
+psycopg2-binary==2.9.1
+redis==3.5.3
+celery==5.1.2
