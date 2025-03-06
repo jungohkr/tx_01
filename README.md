@@ -257,7 +257,16 @@ docker compose down
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 
-
 docker compose up --build
+
+#파일 수정후 해야 할일들
+git add .
+git commit -m "Your commit message"
+git push origin main
+docker-compose down
+docker-compose build --no-cache
+docker-compose up
+
+
 
 ```
