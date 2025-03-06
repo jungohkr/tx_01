@@ -148,6 +148,60 @@ class Problem(Base):
     updated_at = Column(DateTime, server_default="CURRENT_TIMESTAMP")
 ```
 
+- **/templates/index.html** :
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Page</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Beautiful Page</h1>
+        <p>This is an example paragraph to demonstrate styling.</p>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
+
+```
+
+-  **/app/static/styles.css** :
+```css
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+```
+-  **/app/static/scripts.js** :
+
+``` js
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Page loaded');
+    // Add more interactivity here
+});
+
+```
+  
+   
+
 -  **/nginx/nginx.conf** :
 ```nginx
 events {}
