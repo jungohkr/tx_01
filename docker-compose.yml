@@ -10,12 +10,12 @@ services:
       - redis
       - postgres
 
-celery:
-  build: ./app
-  command: celery -A tasks worker --loglevel=info
-  depends_on:
-    - redis
-    - postgres
+  celery:
+    build: ./app
+    command: celery -A tasks worker --loglevel=info
+    depends_on:
+      - redis
+      - postgres
 
   postgres:
     image: postgres:latest
