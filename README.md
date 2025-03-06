@@ -6,16 +6,20 @@
 
 ##### 1. **프로젝트 프로젝트 구조** :
 ``` tree
-/study_project/
-├── docker-compose.yml
-├── app/
+/project_root
+├── app
+│   ├── main.py
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   ├── main.py
-│   ├── tasks.py
-│   └── models.py
-├── nginx/
-│   └── nginx.conf
+│   ├── static
+│   │   ├── styles.css
+│   │   └── scripts.js
+│   ├── templates
+│   │   └── index.html
+│   └── ...
+├── docker-compose.yml
+└── ...
+
 ```
 
 
