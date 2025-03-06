@@ -79,7 +79,7 @@ RUN useradd -m appuser USER appuser
 COPY . .
 ```
 
-- **/app/Dockerfile** :
+- **/app/requirements.txt ** :
 ```text
 fastapi
 uvicorn
