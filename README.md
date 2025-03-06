@@ -110,6 +110,9 @@ sqlalchemy==1.4.22
 psycopg2-binary==2.9.1
 redis==3.5.3
 celery==5.1.2
+aiofiles==22.1.0
+jinja2==3.0.3
+
 
 ```
 
