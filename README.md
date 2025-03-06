@@ -23,6 +23,8 @@
 
 - **docker-compose.yml** :
 ```yaml
+version: '3.8'
+
 services:
   app:
     build: ./app
@@ -32,11 +34,14 @@ services:
     depends_on:
       - redis
       - postgres
+
   celery:
     build: ./app
     command: celery -A tasks worker --loglevel=info
     depends_on:
       - redis
+      - postgres
+
   postgres:
     image: postgres:latest
     environment:
@@ -45,8 +50,10 @@ services:
       POSTGRES_DB: study_db
     volumes:
       - pg_data:/var/lib/postgresql/data
+
   redis:
     image: redis:latest
+
   nginx:
     image: nginx:latest
     ports:
@@ -55,8 +62,10 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - app
+
 volumes:
   pg_data:
+
 ```
 
 - **/app/Dockerfile** :
