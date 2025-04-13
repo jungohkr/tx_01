@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask_app
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env
+    ports:
+      - "5001:5000"  # 5001번 포트를 사용
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true  # tx_02의 네트워크를 사용
+
+volumes:
+  db_data:
